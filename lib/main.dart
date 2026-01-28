@@ -1,3 +1,5 @@
+import 'package:facebook_assignment/core/app_routes.dart';
+import 'package:facebook_assignment/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,6 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: AppRoutes.loginScreen,
+      routes: {
+        AppRoutes.loginScreen: (context) => LoginScreen(),
+
+      },
 
     );
   }
