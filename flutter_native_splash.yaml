@@ -5,13 +5,13 @@ flutter_native_splash:
 
   # background_image: assets/images/Splash Screen.png
 
-  image: assets/images/Logo.png
+  image: assets/images/facebook-svgrepo-com (1) 1.png
 
   fullscreen: true
 
   android_12:
     color: "#FFFFFF"
-    image: assets/images/Logo.png
+    image: assets/images/facebook-svgrepo-com (1) 1.png
     icon_background_color: "#FFFFFF"
 
     branding: assets/images/Group 22.png
