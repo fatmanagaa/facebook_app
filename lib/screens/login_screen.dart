@@ -53,11 +53,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       if (value == null || value.isEmpty) {
                         return 'Email is required';
                       }
-        
+
                       final emailRegex = RegExp(
                         r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$',
                       );
-        
+
                       if (!emailRegex.hasMatch(value)) {
                         return 'Invalid email format';
                       }
@@ -70,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     keyboardType: TextInputType.visiblePassword,
                     obscureText: obscurePassword,
                     autovalidateMode: AutovalidateMode.onUserInteraction,
-        
+
                     maxLength: 6,
                     decoration: InputDecoration(
                       hintText: 'Password',
@@ -78,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       fillColor: AppColors.white,
                       border: OutlineInputBorder(
                         borderSide: BorderSide(color: Color(0xFF898F9C)),
-        
+
                         borderRadius: BorderRadius.circular(16),
                       ),
                       suffixIcon: IconButton(
@@ -98,11 +98,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       if (value == null || value.isEmpty) {
                         return 'Password is required';
                       }
-        
+
                       final passwordRegex = RegExp(
-                        r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$',
+                        r'^.{6,}$',
                       );
-        
+
+
                       if (!passwordRegex.hasMatch(value)) {
                         return 'Password must contain uppercase, lowercase, number and special character';
                       }
@@ -124,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const HomeScreen(),
+                            builder: (context) =>  HomeScreen(),
                           ),
                         );
                       }
@@ -150,9 +151,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   ),
-                 SizedBox(
-                   height: 150,
-                 ),
+                  SizedBox(height: 150),
                   ElevatedButton(
                     onPressed: () {},
                     child: Text('Create New Account'),
