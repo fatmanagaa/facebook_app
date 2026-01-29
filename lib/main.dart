@@ -1,4 +1,5 @@
 import 'package:facebook_assignment/core/app_routes.dart';
+import 'package:facebook_assignment/screens/home_screen.dart';
 import 'package:facebook_assignment/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: AppRoutes.loginScreen,
       routes: {
         AppRoutes.loginScreen: (context) => LoginScreen(),
+        AppRoutes.homeScreen: (context) => HomeScreen(),
 
       },
 
